@@ -1,5 +1,5 @@
-import Dom from '../modules/add.js';
-import taskArray from '../modules/taskArray.js';
+import Dom from '../modules/add';
+import taskArray from '../modules/taskArray';
 
 document.querySelector('.toDo-list').innerHTML = `
 <ul class="list">
