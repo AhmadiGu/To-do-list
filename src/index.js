@@ -1,4 +1,4 @@
-import DisplayTodos from './modules/functionalities.js';
+import DisplayTodos from './modules/functionalities';
 
 window.addEventListener('load', () => {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
