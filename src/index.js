@@ -1,5 +1,5 @@
 import DisplayTodos from './modules/functionalities';
-
+// if its not apper for you kindly add .js to functionalities.js
 window.addEventListener('load', () => {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
   const toDoInput = document.querySelector('.toDo-add-form');
