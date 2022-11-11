@@ -1,4 +1,4 @@
-import DisplayTodos from './modules/functionalities';
+import DisplayTodos from './modules/functionalities.js';
 // if its not apper for you kindly add .js to functionalities.js
 window.addEventListener('load', () => {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
