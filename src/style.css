@@ -148,6 +148,10 @@ li {
   font-size: 18px;
 }
 
+.done {
+  background: rgb(214, 248, 245);
+}
+
 @media screen and (max-width: 768px) {
   main {
     background: rgb(248, 247, 246);

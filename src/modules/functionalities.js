@@ -38,6 +38,22 @@ const DisplayTodos = () => {
     actions.appendChild(editButton);
     todolist.appendChild(todoUl);
 
+    if (todo.compeled) {
+      todoSpan.classList.add('done');
+    }
+
+    inputItem.addEventListener('click', (e) => {
+      todo.compeled = e.target.checked;
+      localStorage.setItem('todos', JSON.stringify(todos));
+
+      if (todo.compeled) {
+        todoItem.classList.add('done');
+      } else {
+        todoItem.classList.remove('done');
+      }
+      DisplayTodos();
+    });
+
     editButton.addEventListener('click', () => {
       const input = content.querySelector('input');
       input.removeAttribute('readonly');
@@ -52,6 +68,13 @@ const DisplayTodos = () => {
 
     deleteButton.addEventListener('click', () => {
       todos = todos.filter((t) => t !== todo);
+      localStorage.setItem('todos', JSON.stringify(todos));
+      DisplayTodos();
+    });
+
+    const deleteButtonAll = document.querySelector('.clearAll');
+    deleteButtonAll.addEventListener('click', () => {
+      todos = todos.filter((todo) => todo.compeled === false);
       localStorage.setItem('todos', JSON.stringify(todos));
       DisplayTodos();
     });
