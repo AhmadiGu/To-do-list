@@ -24,6 +24,11 @@ main {
   padding: 60px 270px;
 }
 
+button {
+  border: none;
+  background: transparent;
+}
+
 i {
   color: gray;
   margin: 15px 2px;
@@ -37,17 +42,25 @@ h2 {
 input {
   border: none;
   background-color: transparent;
+  outline: none;
+  font-size: 18px;
 }
 
 ul {
   list-style: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+li {
+  display: none;
 }
 
 .toDoList-container {
   background: rgb(254, 255, 255);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray, -5px -5px 5px rgb(34, 100, 100);
@@ -62,6 +75,13 @@ ul {
   border-bottom: 1px solid lightgrey;
 }
 
+.toDo-add form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .toDo-title i {
   margin: 25px 2px;
 }
@@ -73,24 +93,41 @@ ul {
 }
 
 .toDo-list {
-  color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.toDo-list .list li {
+.toDo-list .list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 0%;
+  width: 92.5%;
+  padding: 8px 30.5px;
 }
 
-.toDo-list .list li i {
-  margin-right: 50px;
-  margin-top: 0%;
+.span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-ellipsis-vertical {
+  display: none;
+}
+
+.fa-pen-to-square,
+.fa-trash-can {
+  color: gray;
+  margin: 5px 2px;
+  font-size: 18px;
 }
 
 .toDo-list input {
   font-size: 18px;
-  color: rgb(7, 7, 7);
+  color: rgb(12, 10, 10);
+  text-transform: capitalize;
 }
 
 .clearBtn {
@@ -109,4 +146,12 @@ ul {
 .clearBtn button p {
   color: gray;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    background: rgb(248, 247, 246);
+    height: 74.1vh;
+    padding: 60px 27px;
+  }
 }
