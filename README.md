@@ -1,14 +1,15 @@
-# Webpack setup
+# To Do list with webpack
  
 
 > Project Description.
-> **This is Webpack setup created using html,JavaScript and webpack configuration files.**
+> **This is  to do list created using html,css,JavaScript and webpack configuration files.**
 
 
 ## Built With 
 - HTML 
 - JavaScript
 -  webpack
+-  css
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -22,7 +23,7 @@ You must have a code compiler installed on your machine such as (VS code or Atom
 - Paste the repo link inside the field and press enter.
 
 ## Live Demo  
- 
+ https://ahmadigu.github.io/To-do-list/
 ## Author
   
 - GitHub: [@githubhandle](https://github.com/AhmadiGu/)

@@ -1,13 +1,8 @@
-import _ from 'lodash';
+import Dom from '../modules/add';
+import taskArray from '../modules/taskArray';
 
- function component() {
-   const element = document.createElement('div');
-
-  // Lodash, currently included via a script, is required for this line to work
-  // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-   return element;
- }
-
- document.body.appendChild(component());
+document.querySelector('.toDo-list').innerHTML = `
+<ul class="list">
+${Dom.add(taskArray)}
+</ul>
+`;
