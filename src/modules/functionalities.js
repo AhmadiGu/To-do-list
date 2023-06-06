@@ -67,16 +67,19 @@ const DisplayTodos = () => {
     });
 
     deleteButton.addEventListener('click', () => {
-      todos = todos.filter((t) => t !== todo);
+      todos = todos.filter((t) => t.createAt !== todo.createAt);
       localStorage.setItem('todos', JSON.stringify(todos));
       DisplayTodos();
+      location.reload();
     });
 
-    const deleteButtonAll = document.querySelector('.clearAll');
-    deleteButtonAll.addEventListener('click', () => {
-      todos = todos.filter((todo) => todo.compeled === false);
-      localStorage.setItem('todos', JSON.stringify(todos));
+    const clearAllButton = document.querySelector('.clearAll');
+    clearAllButton.addEventListener('click', () => {
+      const todos = JSON.parse(localStorage.getItem('todos')) || [];
+      const filteredTodos = todos.filter((todo) => !todo.compeled);
+      localStorage.setItem('todos', JSON.stringify(filteredTodos));
       DisplayTodos();
+      location.reload();
     });
   });
 };
