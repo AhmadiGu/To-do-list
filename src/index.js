@@ -1,7 +1,7 @@
 import DisplayTodos from './modules/functionalities.js';
 // if its not apper for you kindly add .js to functionalities.js
 window.addEventListener('load', () => {
-  const todos = JSON.parse(localStorage.getItem('todos')) || [];
+  let todos = JSON.parse(localStorage.getItem('todos')) || [];
   const toDoInput = document.querySelector('.toDo-add-form');
   toDoInput.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -19,3 +19,5 @@ window.addEventListener('load', () => {
   });
   DisplayTodos();
 });
+
+
