@@ -22,8 +22,10 @@ You must have a code compiler installed on your machine such as (VS code or Atom
 - Press cmd + shift + P and type gitclone and choose the first option.
 - Paste the repo link inside the field and press enter.
 
-## Live Demo  
- https://ahmadigu.github.io/To-do-list/
+## Video Demo 
+[To do list see how it looks and work](./vedio/ToDoList%20-%20Google%20Chrome%202023-06-06%2017-14-31.mp4)
+
+  
 ## Author
   
 - GitHub: [@githubhandle](https://github.com/AhmadiGu/)
